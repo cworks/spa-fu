@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spa Starter</title>
+	<!-- load styles first, thirdparty then ours -->
+	<link rel="stylesheet" type="text/css" href="css/spa.css">
+	<link rel="stylesheet" type="text/css" href="css/spa.shell.css">
+
+	<!--
+		thirdparty javascripts, loading in head because some single
+        page applications (like this one) generate html with javascript
+        and therefore placing outside of the header doesn't result in faster
+        html rendering.
+	-->
+	<script src="js/jquery/jquery-1.11.1.js"></script>
+	<script src="js/jquery/jquery.uriAnchor-1.1.3.js"></script>
+
+	<!-- our javascript -->
+	<script src="js/spa.js"></script>
+	<script src="js/spa.shell.js"></script>
+
+	<!-- initialize the app when DOM is ready. -->
+	<script>
+	$(function() {
+		spa.initModule($('#spa'));
+	});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
